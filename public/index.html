@@ -39,5 +39,24 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger-cx/bootstrap.js?v=1"></script>
+    <df-messenger
+      df-cx="true"
+      location="us-central1"
+      chat-title="BOTSITO"
+      agent-id="ae4e898e-f55e-4b20-a13b-f0ea10271912"
+      language-code="es"
+    ></df-messenger>
+    <script>
+      window.addEventListener("dfMessengerLoaded", function () {
+        const dfMessengerWrapper = document
+          .querySelector("df-messenger")
+          .shadowRoot.querySelector("df-messenger-chat")
+          .shadowRoot.querySelector(".chat-wrapper");
+
+        dfMessengerWrapper.style.height = "400px";
+        dfMessengerWrapper.style.width = "500px";
+      });
+    </script>
   </body>
 </html>
