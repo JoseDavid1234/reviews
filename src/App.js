@@ -39,7 +39,7 @@ function App() {
         <Review />
       </section>
       <section className="chat-bot-health">
-
+      <iframe src="https://healthcare-bot-betx6stkswt3k.azurewebsites.net/" width="400" height="300" frameborder="0" scrolling="auto"></iframe>
       </section>
     </main>
   );
